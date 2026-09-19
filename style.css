@@ -1,0 +1,315 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f4ec;
+  color: #17251f;
+  line-height: 1.7;
+}
+
+/* Navbar */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(10, 35, 27, 0.96);
+}
+
+.navbar {
+  max-width: 1150px;
+  margin: auto;
+  min-height: 70px;
+  padding: 0 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #d8b45c;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #d8b45c;
+}
+
+/* Hero */
+
+.hero {
+  min-height: 100vh;
+  padding: 150px 25px 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  color: white;
+
+  background:
+    linear-gradient(rgba(6, 32, 24, .86), rgba(6, 32, 24, .92)),
+    radial-gradient(circle at center, #1c5b45, #061d16);
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.arabic {
+  font-family: "Times New Roman", serif;
+  font-size: 30px;
+  direction: rtl;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 7vw, 75px);
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  color: #d8b45c;
+}
+
+.hero p:not(.arabic) {
+  max-width: 620px;
+  margin: auto;
+  color: #d8e2dc;
+  font-size: 17px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 35px;
+  padding: 14px 28px;
+
+  background: #d8b45c;
+  color: #13251e;
+
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+
+  transition: .3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+/* Sections */
+
+.section {
+  max-width: 950px;
+  margin: auto;
+  padding: 100px 25px;
+  text-align: center;
+}
+
+.section-label {
+  color: #a07b2e;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  margin-bottom: 8px;
+}
+
+.section h2 {
+  font-size: 38px;
+  margin-bottom: 35px;
+}
+
+/* Quran */
+
+.quote-card,
+.dua-card {
+  padding: 55px 30px;
+  background: white;
+  border-radius: 20px;
+
+  box-shadow: 0 15px 40px rgba(0,0,0,.08);
+}
+
+.big {
+  font-size: 40px;
+  color: #176044;
+  margin-bottom: 25px;
+}
+
+.translation {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.quote-card span,
+.dua-card span {
+  display: block;
+  margin-top: 15px;
+  color: #8a7444;
+}
+
+/* Hadith */
+
+.dark-section {
+  max-width: none;
+  background: #0a2b20;
+  color: white;
+}
+
+.hadith-card {
+  max-width: 700px;
+  margin: auto;
+  padding: 50px 30px;
+
+  border: 1px solid rgba(216,180,92,.35);
+  border-radius: 20px;
+  background: rgba(255,255,255,.04);
+}
+
+.hadith-icon {
+  color: #d8b45c;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.hadith-card p {
+  font-size: 25px;
+  font-style: italic;
+}
+
+.hadith-card small {
+  display: block;
+  margin-top: 20px;
+  color: #d8b45c;
+}
+
+/* Reminder */
+
+.reminder {
+  padding: 90px 25px;
+  text-align: center;
+
+  background: #d8b45c;
+  color: #14251f;
+}
+
+.reminder .arabic {
+  font-size: 38px;
+}
+
+.reminder h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+/* About */
+
+.about {
+  max-width: 750px;
+}
+
+.about p:last-child {
+  color: #657169;
+  font-size: 17px;
+}
+
+/* Footer */
+
+footer {
+  padding: 50px 25px;
+  text-align: center;
+
+  background: #061b14;
+  color: #b9c8c0;
+}
+
+footer .logo {
+  margin-bottom: 15px;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #72877d;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+  .navbar {
+    flex-direction: column;
+    padding: 18px;
+    gap: 12px;
+  }
+
+  .nav-links {
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  .hero {
+    padding-top: 180px;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+  }
+
+  .hero .arabic {
+    font-size: 24px;
+  }
+
+  .section {
+    padding: 75px 20px;
+  }
+
+  .section h2 {
+    font-size: 30px;
+  }
+
+  .big {
+    font-size: 30px;
+  }
+
+  .hadith-card p {
+    font-size: 20px;
+  }
+
+  .reminder h2 {
+    font-size: 25px;
+  }
+}
